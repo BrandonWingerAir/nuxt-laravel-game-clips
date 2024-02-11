@@ -20,11 +20,44 @@
         <input
           type="text"
           class="w-full pl-3 my-2 bg-transparent placeholder-[#838383] text-[15px] focus:outline-none"
-          placeholder="Search accounts"
+          placeholder="Search..."
         />
         <div class="px-3 py-1 flex items-center border-l border-l-grey-300">
           <Icon name="ri:search-line" color="A#A2A7" size="22"/>
         </div>
+      </div>
+      
+      <div class="flex items-center justify-end gap-3 min-w-[275px] max-w-[320px] w-full">
+        <!-- <button v-if="false" class="flex items-center border rounded-sm px-3 py-[6px] hover:bg-gray-100">
+          <Icon name="mdi:plus" color="#000000" size="22"/>
+          <span class="px-2 font-medium text-[15px]">
+            Upload
+          </span>
+        </button> -->
+
+        <!-- <div class="flex items-center">
+          <button class="flex items-center bg-[#642cf0] text-white border rounded-md px-3 py-[6px]">
+            <span class="mx-4 font-medium text-[15px]">
+              Log in
+            </span>
+          </button>
+          <Icon name="" color="#161724" size="25"/>
+        </div> -->
+
+        <div class="flex items-center">
+          <Icon class="ml-1 mr-4" name="material-symbols:notifications-unread-outline" color="#161724" size="30"/>
+          <Icon class="mr-5" name="bx:message-detail" color="#161724" size="27"/>
+        </div>
+        
+        <div class="flex items-center">
+          <button class="flex items-center bg-[#642cf0] text-white border rounded-md px-3 py-[6px]">
+            <Icon name="mdi:plus" color="white" size="25"/>
+            <span class="px-2 font-medium text-[15px]">
+              Upload
+            </span>
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
