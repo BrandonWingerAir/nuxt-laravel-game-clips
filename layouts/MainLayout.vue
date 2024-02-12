@@ -1,12 +1,15 @@
 <template>
   <TopNav/>
-  <div>
-
+  <div
+    :class="route.fullPath === '/' ? 'max-w-[1140px]' : ''"
+    class="flex justify-between mx-auto w-full lg:px-2.5 px-0"
+  >
+    <div>
+      <SideNav/>
+    </div>
   </div>
 </template>
 
-<script>
-  export default {
-    
-  }
+<script setup>
+const route = useRoute();
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div
     id="TopNav"
-    class="fixed z-30 flex items-center w-full bg-neutral-100 border-b h-[70px]"
+    class="fixed z-30 flex items-center w-full border-b h-[70px]"
   >
     <div
       :class="route.fullPath === '/' ? 'max-w-[1150px]' : ''"
@@ -87,7 +87,7 @@
         </div>
         
         <div class="flex items-center text-white">
-          <button class="flex items-center bg-blue-500 border border-neutral-600 rounded-md px-3 py-[6px]">
+          <button class="flex items-center bg-emerald-500 border border-neutral-600 rounded-md px-3 py-[6px]">
             <Icon name="mdi:plus" size="25"/>
             <span class="px-2 font-medium text-[15px]">
               Upload
