@@ -1,27 +1,24 @@
 <template>
-  <div
-    id="TopNav"
-    class="fixed z-30 flex items-center w-full border-b h-[70px]"
-  >
+  <div id="TopNav" class="fixed z-30 flex items-center w-full bg-[#212d55] border-b h-[70px]">
     <div
       :class="route.fullPath === '/' ? 'max-w-[1150px]' : ''"
       class="flex items-center justify-between w-full px-6 mx-auto"
     >
       <div :class="route.fullPath === '/' ? 'w-[80%]' : 'lg:w-[20%] w-[70%]'" class="flex">
-        <NuxtLink to="/" class="flex items-center mr-6">
+        <NuxtLink to="/" class="flex items-center mr-6 text-white">
           <img width="47" class="mr-2" src="~/assets/images/gameclips-logo.svg">
           <h1 class="mb-1 uppercase text-4xl">
             G<span class="text-lg">ame</span><span class="text-lg font-semibold">Clips</span>
           </h1>
         </NuxtLink>
         
-        <div class="hidden md:flex items-center rounded-full max-w-[380px] w-full border-l-2">
+        <div class="hidden md:flex items-center max-w-[380px] w-full">
           <input
             type="text"
-            class="w-full pl-3 py-2 bg-transparent placeholder-neutral-500 text-[15px] focus:outline-none"
+            class="w-full pl-3 py-2 bg-white placeholder-neutral-500 text-[15px] border-l-2 rounded-l-full focus:outline-none"
             placeholder="Search..."
           />
-          <div class="pl-3 pr-5 py-3 flex items-center bg-neutral-700 border-l border-l-grey-300 rounded-r-full">
+          <div class="pl-3 pr-5 py-2 flex items-center bg-neutral-600 border-l border-l-grey-300 rounded-r-full">
             <Icon name="ri:search-line" color="white" size="22"/>
           </div>
         </div>
@@ -46,13 +43,11 @@
         </div> -->
 
         <div class="flex items-center">
-          <Icon class="ml-1 mr-4" name="bx:message-detail" color="#161724" size="27"/>
-          <Icon class="mr-5" name="material-symbols:notifications-unread-outline" color="#161724" size="30"/>
+          <Icon class="ml-1 mr-4" color="#34d399" size="27" name="bx:message-detail"/>
+          <Icon class="mr-5" color="#ffc107" size="30" name="material-symbols:notifications-unread-outline"/>
+
           <div class="relative">
-            <button 
-              class="mt-1 mr-2"
-              @click="$event => showMenu = !showMenu"
-            >
+            <button class="mt-1 mr-2" @click="$event => showMenu = !showMenu">
               <img
                 class="rounded-full"
                 width="33"
@@ -60,23 +55,15 @@
               />
             </button>
 
-            <div
-              v-if="showMenu"
-              id="PopupMenu"
-              class="absolute bg-white roudned-lg py-1.5 w-[200px] shadow-xl border top-[43px] -right-2"
-            >
-              <NuxtLink
-                @click="$event => showMenu = false"
-                class="flex items-center justify-start py-3 px-2 hover:bg-gray-100 cursor-pointer"
-              >
+            <div v-if="showMenu" id="PopupMenu" class="absolute bg-white roudned-lg py-1.5 w-[200px] shadow-xl border top-[43px] -right-2">
+              <NuxtLink @click="$event => showMenu = false" class="flex items-center justify-start py-3 px-2 hover:bg-gray-100 cursor-pointer">
                 <Icon name="ph:user" size="20"/>
                 <span class="pl-2 font-semibold text-sm">
                   Profile
                 </span>
               </NuxtLink>
-              <div
-                class="flex items-center justify-start py-3 px-1.5 hover:bg-gray-100 border-t cursor-pointer"
-              >
+
+              <div class="flex items-center justify-start py-3 px-1.5 hover:bg-gray-100 border-t cursor-pointer">
                 <Icon name="ic:outline-login" size="20"/>
                 <span class="pl-2 font-semibold text-sm">
                   Log out
@@ -87,7 +74,7 @@
         </div>
         
         <div class="flex items-center text-white">
-          <button class="flex items-center bg-emerald-500 border border-neutral-600 rounded-md px-3 py-[6px]">
+          <button class="flex items-center bg-blue-500 border border-slate-400 rounded-md px-3 py-[6px]">
             <Icon name="mdi:plus" size="25"/>
             <span class="px-2 font-medium text-[15px]">
               Upload
