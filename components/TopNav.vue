@@ -4,10 +4,10 @@
       :class="route.fullPath === '/' ? 'max-w-[1150px]' : ''"
       class="flex items-center justify-between w-full px-6 mx-auto"
     >
-      <div :class="route.fullPath === '/' ? 'w-[80%]' : 'lg:w-[20%] w-[70%]'" class="flex">
+      <div :class="route.fullPath === '/' ? 'md:w-[80%] w-[30%]' : 'lg:w-[20%] w-[70%]'" class="flex md:min-w-[80%]">
         <NuxtLink to="/" class="flex items-center mr-6 text-white">
-          <img width="47" class="mr-2" src="~/assets/images/gameclips-logo.svg">
-          <h1 class="mb-1 uppercase text-4xl">
+          <img width="45" class="mr-2 mb-1" src="~/assets/images/gameclips-logo.svg">
+          <h1 class="mb-1 uppercase text-3xl">
             G<span class="text-lg">ame</span><span class="text-lg font-semibold">Clips</span>
           </h1>
         </NuxtLink>
@@ -25,7 +25,7 @@
       </div>
 
       
-      <div class="flex items-center justify-end gap-3 min-w-[275px] max-w-[320px] w-full">
+      <div class="flex items-center justify-end gap-3 lg:min-w-[275px] max-w-[320px] w-full">
         <!-- <button v-if="false" class="flex items-center border rounded-sm px-3 py-[6px] hover:bg-gray-100">
           <Icon name="mdi:plus" color="#000000" size="22"/>
           <span class="px-2 font-medium text-[15px]">
@@ -43,7 +43,7 @@
         </div> -->
 
         <div class="flex items-center">
-          <Icon class="ml-1 mr-4" color="#34d399" size="27" name="bx:message-detail"/>
+          <Icon class="ml-1 mr-4 text-neutral-200" size="27" name="bx:message-detail"/>
           <Icon class="mr-5" color="#ffc107" size="30" name="material-symbols:notifications-unread-outline"/>
 
           <div class="relative">
@@ -73,8 +73,8 @@
           </div>
         </div>
         
-        <div class="flex items-center text-white">
-          <button class="flex items-center bg-blue-500 border border-slate-400 rounded-md px-3 py-[6px]">
+        <div class="flex items-center text-white hidden lg:flex">
+          <button class="flex items-center bg-emerald-600 border border-slate-400 rounded-md px-3 py-[6px]">
             <Icon name="mdi:plus" size="25"/>
             <span class="px-2 font-medium text-[15px]">
               Upload
